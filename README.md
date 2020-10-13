@@ -32,7 +32,7 @@ More documentation available at: https://devpi.net/docs/devpi/devpi/stable/+d/in
     pip3 install -U devpi-client
     devpi use https://pypi.tarrenj.com
     devpi login DevOps --password utest
-    devpi use MSi
+    devpi use Dev
     devpi upload --from-dir <ULOC>
     
     devpi logout
