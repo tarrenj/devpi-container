@@ -1,0 +1,8 @@
+Doc/*
+README.md
+
+docker-compose.yml
+pypi_vars.env
+*.swp
+.gitignore
+.git/*

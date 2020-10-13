@@ -1,0 +1,9 @@
+devpi-server:
+    serverdir: /data
+    host: 0.0.0.0
+    port: 80
+    outside-url: http://pypi.tarrenj.com
+    DEVPISERVER_RESTRICT_MODIFY: root,DevOps
+    no-events: false
+    no-root-pypi: false
+

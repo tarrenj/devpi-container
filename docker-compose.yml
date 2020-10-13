@@ -1,0 +1,21 @@
+version: '3.4'
+
+# This file is to help test things. When running in AWS this will not be used
+
+services:
+    devpi.defensemsi.com:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        #image: 722134036558.dkr.ecr.us-gov-east-1.amazonaws.com/devpi:latest
+        env_file: pypi_vars.env
+        container_name: pypi
+        restart: unless-stopped
+        ports:
+            - "80:80/tcp"
+        #entrypoint: tail -f /dev/null
+        volumes:
+            - pypi_data:/data/
+
+volumes:
+    pypi_data:
