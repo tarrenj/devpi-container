@@ -1,6 +1,10 @@
 FROM python:latest
 LABEL maintainer="jake.tarren@gmail.com"
 
+RUN apk update \
+    && apk upgrade \
+    && apk cache clean
+
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
 RUN chmod +x /usr/local/bin/entrypoint.sh \
